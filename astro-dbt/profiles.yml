@@ -1,0 +1,18 @@
+config:
+    use_colors: True 
+    printer_width: 120
+    send_anonymous_usage_stats: False
+
+astro-dbt-example-db:
+  outputs:
+    dev:
+      type: postgres
+      threads: 10
+      keepalives_idle: 0
+      host: "{{ env_var('HOST') }}"
+      port: "{{ env_var('PORT') | int }}"
+      user: "{{ env_var('USERNAME') }}"
+      pass: "{{ env_var('PASSWORD') }}"
+      dbname: dwh
+      schema: dwh
+  target: dev

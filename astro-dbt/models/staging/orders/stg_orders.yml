@@ -1,0 +1,83 @@
+version: 2
+
+models:
+  - name: stg_orders__customer
+    description: Lorem Ipsum
+    columns:
+      - name: customer_id
+        description: Lorem Ipsum
+        tests:
+          - unique
+          - not_null
+      - name: cust_name
+        description: Lorem Ipsum
+        tests:
+          - not_null
+      - name: street
+        description: Lorem Ipsum
+        tests:
+          - not_null
+      - name: city
+        description: Lorem Ipsum
+        tests:
+          - not_null
+      - name: updated_dtm
+        description: Lorem Ipsum
+
+  - name: stg_orders__product
+    description: Lorem Ipsum
+    columns:
+      - name: product_id
+        description: Lorem Ipsum
+        tests:
+          - unique
+          - not_null
+      - name: product_name
+        description: Lorem Ipsum
+        tests:
+          - not_null
+      - name: supplier_id
+        description: Lorem Ipsum
+        tests:
+          - not_null
+      - name: producttype_id
+        description: Lorem Ipsum
+        tests:
+          - not_null
+      - name: updated_dtm
+        description: Lorem Ipsum
+
+  - name: stg_orders__order_info
+    description: Lorem Ipsum
+    columns:
+      - name: order_id
+        description: Lorem Ipsum
+        tests:
+          - unique
+          - not_null
+      - name: customer_id
+        description: Lorem Ipsum
+        tests:
+          - not_null
+      - name: create_dtm
+        description: Lorem Ipsum
+
+  - name: stg_orders__orderline
+    description: Lorem Ipsum
+    columns:
+      - name: order_id
+        description: Lorem Ipsum
+        tests:
+          - not_null
+      - name: orderline_id
+        description: Lorem Ipsum
+        tests:
+          - not_null
+      - name: product_id
+        description: Lorem Ipsum
+        tests:
+          - not_null
+      - name: quantity
+        description: Lorem Ipsum
+      - name: price
+        description: Lorem Ipsum

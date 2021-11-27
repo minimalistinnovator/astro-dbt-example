@@ -1,0 +1,27 @@
+name: 'astro_dbt_example'
+version: '0.0.1'
+config-version: 2
+
+profile: 'astro-dbt-example-db'
+
+source-paths: ["models"]
+test-paths: ["tests"]
+data-paths: ["data"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+seeds:
+  astro_dbt_example:
+    mart:
+      schema: dwh
+
+models:
+  astro_dbt_example:
+    staging:
+      +materialized: view
+      schema: staging
+      orders:
+        +materialized: view
+    mart:
+      +materialized: table
+      schema: dwh

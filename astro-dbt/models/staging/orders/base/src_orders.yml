@@ -1,0 +1,106 @@
+version: 2
+
+sources:
+  - name: orders
+    description: Refined datasource
+    database: dwh
+    schema: refined
+    meta:
+      contains_pii: true
+      owner: "@Katy"
+    tags:
+      - refined
+      - pii
+    quoting:
+      database: true
+      schema: true
+      identifier: true
+    # loaded_at_field:
+    # freshness:
+    #   warn_after:
+    #     count:
+    #     period:
+    #   error_after:
+    #     count:
+    #     period:
+    tables:
+      - name: customer
+        description: Lorem Ipsum
+        columns:
+          - name: customer_id
+            description: Lorem Ipsum
+            tests:
+              - unique
+              - not_null
+          - name: cust_name
+            description: Lorem Ipsum
+            tests:
+              - not_null
+          - name: street
+            description: Lorem Ipsum
+            tests:
+              - not_null
+          - name: city
+            description: Lorem Ipsum
+            tests:
+              - not_null
+          - name: updated_dtm
+            description: Lorem Ipsum
+
+      - name: product
+        description: Lorem Ipsum
+        columns:
+          - name: product_id
+            description: Lorem Ipsum
+            tests:
+              - unique
+              - not_null
+          - name: product_name
+            description: Lorem Ipsum
+            tests:
+              - not_null
+          - name: supplier_id
+            description: Lorem Ipsum
+            tests:
+              - not_null
+          - name: producttype_id
+            description: Lorem Ipsum
+            tests:
+              - not_null
+          - name: updated_dtm
+            description: Lorem Ipsum
+
+      - name: order_info
+        description: Lorem Ipsum
+        columns:
+          - name: order_id
+            description: Lorem Ipsum
+            tests:
+              - unique
+              - not_null
+          - name: customer_id
+            description: Lorem Ipsum
+            tests:
+              - not_null
+          - name: create_dtm
+            description: Lorem Ipsum
+
+      - name: orderline
+        description: Lorem Ipsum
+        columns:
+          - name: order_id
+            description: Lorem Ipsum
+            tests:
+              - not_null
+          - name: orderline_id
+            description: Lorem Ipsum
+            tests:
+              - not_null
+          - name: product_id
+            description: Lorem Ipsum
+            tests:
+              - not_null
+          - name: quantity
+            description: Lorem Ipsum
+          - name: price
+            description: Lorem Ipsum
