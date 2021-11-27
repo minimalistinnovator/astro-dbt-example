@@ -8,7 +8,7 @@ from airflow.utils.task_group import TaskGroup
 
 # We're hardcoding this value here for the purpose of the demo, but in a production environment this
 # would probably come from a config file and/or environment variables!
-DBT_PROJECT_DIR = '/usr/local/airflow/astro-dbt-example/astro-dbt'
+DBT_PROJECT_DIR = '/usr/local/airflow/astro-dbt'
 
 
 dag = DAG(
