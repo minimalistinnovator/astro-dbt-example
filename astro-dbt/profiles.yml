@@ -9,10 +9,10 @@ astro-dbt-example-db:
       type: postgres
       threads: 10
       keepalives_idle: 0
-      host: "{{ env_var('HOST') }}"
-      port: "{{ env_var('PORT') | int }}"
-      user: "{{ env_var('USERNAME') }}"
-      pass: "{{ env_var('PASSWORD') }}"
+      host: "172.29.16.1"
+      port: 5432
+      user: "postgres"
+      pass: "admin"
       dbname: dwh
       schema: dwh
   target: dev
