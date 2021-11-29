@@ -164,10 +164,16 @@ models:
         description: Lorem Ipsum
         tests:
           - not_null
+          - orphan_children:
+              to: ref('products_snapshot')
+              field: product_id
       - name: customer_key
         description: Lorem Ipsum
         tests:
           - not_null
+          - orphan_children:
+              to: ref('customers_snapshot')
+              field: customer_id
       - name: order_id
         description: Lorem Ipsum
         tests:
@@ -184,3 +190,4 @@ models:
         description: Lorem Ipsum
         tests:
           - not_null
+          - price_is_too_low

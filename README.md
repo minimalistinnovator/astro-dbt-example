@@ -45,6 +45,6 @@ Then create some tables and populate it with some data by running the following 
     dbt init astro-dbt
 4. Configure profiles.yml to setup the connection to the postgres database
 5. Validate your configuration by running the following command
-    HOST=172.29.16.1 PORT=5432 USERNAME=postgres PASSWORD=admin dbt debug --profi
+    HOST=172.31.96.1 PORT=5432 USERNAME=postgres PASSWORD=admin dbt debug --profi
 les-dir .
 

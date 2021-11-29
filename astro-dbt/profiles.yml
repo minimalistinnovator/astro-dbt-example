@@ -9,7 +9,7 @@ astro-dbt-example-db:
       type: postgres
       threads: 10
       keepalives_idle: 0
-      host: "172.29.16.1"
+      host: "172.31.96.1"
       port: 5432
       user: "postgres"
       pass: "admin"
